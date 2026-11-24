@@ -6,7 +6,7 @@ Skills de terceros (MIT) incluidas con crédito en [THIRD_PARTY.md](THIRD_PARTY.
 
 ## Instalación
 
-### Claude Code (plugin marketplace)
+### Claude Code
 
 ```
 /plugin marketplace add rgbardack-cyber/bardack-skills-and-agents
@@ -15,13 +15,26 @@ Skills de terceros (MIT) incluidas con crédito en [THIRD_PARTY.md](THIRD_PARTY.
 
 Las skills quedan como `/marketing-y-contenido:<skill>`. Plugins: `marketing-y-contenido`, `negocios-y-startups`, `desarrollo-de-software`, `productividad-y-conocimiento`.
 
+### ChatGPT Codex
+
+Codex lee el mismo formato de plugin (carpeta `skills/` con `SKILL.md`). Este repo trae su catálogo en `.agents/plugins/marketplace.json`.
+
+```
+codex plugin marketplace add rgbardack-cyber/bardack-skills-and-agents
+```
+
+Luego instala el plugin que quieras desde el directorio de plugins de la app de Codex/ChatGPT (la CLI solo gestiona el catálogo). Alternativa sin plugins: clona el repo y copia las skills a `~/.codex/skills`:
+
+```powershell
+git clone https://github.com/rgbardack-cyber/bardack-skills-and-agents
+./bardack-skills-and-agents/scripts/install-codex.ps1
+```
+
+Más detalles en [chatgpt/README.md](chatgpt/README.md).
+
 ### Claude.ai
 
 Descarga la carpeta de la skill que quieras (la que contiene `SKILL.md`), comprímela en `.zip` y súbela en Ajustes → Capacidades → Skills.
-
-### ChatGPT / Codex
-
-Las skills usan el mismo formato `SKILL.md`. En Windows: `scripts/install-codex.ps1` copia todas a `~/.codex/skills`. Detalles en [chatgpt/README.md](chatgpt/README.md).
 
 ### Skills con scripts
 

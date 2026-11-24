@@ -1,0 +1,11 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "marketing-y-contenido",
+  "version": "1.0.0",
+  "description": "Imágenes, video, marca, miniaturas, fichas de marketplace y flujo de contenido para LinkedIn. (10 skills, 2 subagentes)",
+  "author": {
+    "name": "Ryan Bardack"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/rgbardack-cyber/bardack-skills-and-agents"
+}

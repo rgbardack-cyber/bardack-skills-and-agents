@@ -1,0 +1,11 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "negocios-y-startups",
+  "version": "1.0.0",
+  "description": "Pon a prueba un negocio antes de lanzarlo: junta directiva, CFO, precios, oferta, competencia, y modos para generar ideas y priorizar. (16 skills)",
+  "author": {
+    "name": "Ryan Bardack"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/rgbardack-cyber/bardack-skills-and-agents"
+}

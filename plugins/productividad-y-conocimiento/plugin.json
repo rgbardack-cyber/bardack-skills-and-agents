@@ -1,0 +1,11 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "productividad-y-conocimiento",
+  "version": "1.0.0",
+  "description": "Verificación adversarial, recorte de costo, compresión de prompts, contexto largo y juicio de múltiples intentos. (11 skills)",
+  "author": {
+    "name": "Ryan Bardack"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/rgbardack-cyber/bardack-skills-and-agents"
+}

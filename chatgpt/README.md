@@ -1,6 +1,16 @@
 # Usar estas skills en ChatGPT y Codex
 
-## Codex (CLI / app)
+## Codex: instalar como plugin marketplace
+
+El repo trae `.agents/plugins/marketplace.json` y un `plugin.json` por plugin:
+
+```
+codex plugin marketplace add rgbardack-cyber/bardack-skills-and-agents
+```
+
+La CLI solo registra el catálogo; instala el plugin desde el directorio de plugins de la app de Codex/ChatGPT. (Formato tomado de la documentación de OpenAI; no se pudo probar en esta máquina.)
+
+## Codex: copiar skills a mano
 
 Codex lee skills con el mismo formato `SKILL.md` desde `~/.codex/skills` (o `.agents/skills` dentro de un proyecto).
 

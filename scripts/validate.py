@@ -83,6 +83,15 @@ try:
 except Exception as e:
     err(f"marketplace.json inválido: {e}")
 
+cm = os.path.join(ROOT, ".agents", "plugins", "marketplace.json")
+try:
+    for p in json.load(open(cm, encoding="utf-8"))["plugins"]:
+        path = p["source"]["path"] if isinstance(p["source"], dict) else p["source"]
+        if not os.path.isdir(os.path.join(ROOT, path)) or not os.path.isfile(os.path.join(ROOT, path, "plugin.json")):
+            err(f"codex marketplace: falta {path} o su plugin.json")
+except Exception as e:
+    err(f"codex marketplace inválido: {e}")
+
 for dp, dn, fn in os.walk(ROOT):
     dn[:] = [d for d in dn if d not in (".git",)]
     for d in list(dn):

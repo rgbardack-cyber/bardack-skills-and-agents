@@ -59,7 +59,7 @@ Hechas:
 - `claude plugin marketplace add <ruta local>` + `plugin install` de los 4 plugins en una configuración aislada (la config real no se tocó): aparecieron 56 skills y 2 agentes, ningún `node_modules`.
 
 No hechas:
-- Codex: no está instalado aquí; `scripts/install-codex.ps1` no se ejecutó.
+- Codex: no está instalado aquí. El catálogo `.agents/plugins/marketplace.json` y los `plugin.json` se escribieron según la documentación de OpenAI pero no se probaron con `codex plugin marketplace add`; `scripts/install-codex.ps1` tampoco se ejecutó.
 - Claude.ai (subida de .zip de una skill): no probado.
 - Ejecución de los scripts de las skills (`claude-generate` con `npm install`, scripts Python de `founder-*`): no se ejecutaron. Los renombres no tocan sus scripts.
 - GPTs de ChatGPT: no están en disco; Ryan debe exportarlos a mano (`chatgpt/gpts/`, hoy vacía).

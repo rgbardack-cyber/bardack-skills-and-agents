@@ -1,0 +1,56 @@
+{
+  "name": "bardack-skills-and-agents",
+  "interface": {
+    "displayName": "Bardack's Skills and Agents"
+  },
+  "plugins": [
+    {
+      "name": "marketing-y-contenido",
+      "source": {
+        "source": "local",
+        "path": "./plugins/marketing-y-contenido"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "negocios-y-startups",
+      "source": {
+        "source": "local",
+        "path": "./plugins/negocios-y-startups"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "desarrollo-de-software",
+      "source": {
+        "source": "local",
+        "path": "./plugins/desarrollo-de-software"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "productividad-y-conocimiento",
+      "source": {
+        "source": "local",
+        "path": "./plugins/productividad-y-conocimiento"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

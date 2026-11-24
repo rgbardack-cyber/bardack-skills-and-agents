@@ -1,0 +1,11 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "desarrollo-de-software",
+  "version": "1.0.0",
+  "description": "Modos de trabajo para programar: rápido, mínimo, exhaustivo, triage de incidentes, plan de construcción y sitios web. (19 skills)",
+  "author": {
+    "name": "Ryan Bardack"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/rgbardack-cyber/bardack-skills-and-agents"
+}
