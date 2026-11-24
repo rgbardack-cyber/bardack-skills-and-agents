@@ -1,0 +1,8 @@
+node_modules/
+.runtime/
+output/
+.env
+auth.json
+*.sqlite
+__pycache__/
+graphify-out/

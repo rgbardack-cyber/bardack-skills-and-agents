@@ -1,0 +1,13 @@
+{
+  "name": "negocios-y-startups",
+  "description": "Pon a prueba un negocio antes de lanzarlo: junta directiva, CFO, precios, oferta, competencia, y modos para generar ideas y priorizar. (16 skills)",
+  "version": "1.0.0",
+  "author": {
+    "name": "Ryan Bardack"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "skills"
+  ]
+}

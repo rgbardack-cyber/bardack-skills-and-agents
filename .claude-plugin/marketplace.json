@@ -1,0 +1,39 @@
+{
+  "name": "bardack-skills-and-agents",
+  "owner": {
+    "name": "Ryan Bardack"
+  },
+  "metadata": {
+    "description": "Skills y subagentes de Claude/Codex organizados por industria."
+  },
+  "plugins": [
+    {
+      "name": "marketing-y-contenido",
+      "source": "./plugins/marketing-y-contenido",
+      "description": "Imágenes, video, marca, miniaturas, fichas de marketplace y flujo de contenido para LinkedIn. (10 skills, 2 subagentes)",
+      "version": "1.0.0",
+      "category": "marketing-y-contenido"
+    },
+    {
+      "name": "negocios-y-startups",
+      "source": "./plugins/negocios-y-startups",
+      "description": "Pon a prueba un negocio antes de lanzarlo: junta directiva, CFO, precios, oferta, competencia, y modos para generar ideas y priorizar. (16 skills)",
+      "version": "1.0.0",
+      "category": "negocios-y-startups"
+    },
+    {
+      "name": "desarrollo-de-software",
+      "source": "./plugins/desarrollo-de-software",
+      "description": "Modos de trabajo para programar: rápido, mínimo, exhaustivo, triage de incidentes, plan de construcción y sitios web. (19 skills)",
+      "version": "1.0.0",
+      "category": "desarrollo-de-software"
+    },
+    {
+      "name": "productividad-y-conocimiento",
+      "source": "./plugins/productividad-y-conocimiento",
+      "description": "Verificación adversarial, recorte de costo, compresión de prompts, contexto largo y juicio de múltiples intentos. (11 skills)",
+      "version": "1.0.0",
+      "category": "productividad-y-conocimiento"
+    }
+  ]
+}
