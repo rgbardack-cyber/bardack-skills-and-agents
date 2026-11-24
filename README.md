@@ -9,11 +9,11 @@ Skills de terceros (MIT) incluidas con crédito en [THIRD_PARTY.md](THIRD_PARTY.
 ### Claude Code (plugin marketplace)
 
 ```
-/plugin marketplace add <usuario>/bardack-skills-and-agents
+/plugin marketplace add rgbardack-cyber/bardack-skills-and-agents
 /plugin install marketing-y-contenido@bardack-skills-and-agents
 ```
 
-Reemplaza `<usuario>` por el usuario de GitHub que publica el repo. Las skills quedan como `/marketing-y-contenido:<skill>`. Plugins: `marketing-y-contenido`, `negocios-y-startups`, `desarrollo-de-software`, `productividad-y-conocimiento`.
+Las skills quedan como `/marketing-y-contenido:<skill>`. Plugins: `marketing-y-contenido`, `negocios-y-startups`, `desarrollo-de-software`, `productividad-y-conocimiento`.
 
 ### Claude.ai
 

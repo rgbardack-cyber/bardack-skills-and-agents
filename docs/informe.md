@@ -75,4 +75,4 @@ Comando de push (NO ejecutado):
 gh repo create bardack-skills-and-agents --public --source . --push
 ```
 
-Después, el README usa `<usuario>/bardack-skills-and-agents`; sustituir `<usuario>` por el usuario real.
+El README ya usa el usuario real (rgbardack-cyber).

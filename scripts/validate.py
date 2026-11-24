@@ -6,7 +6,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Patrones de datos personales. Se arman por partes para que este archivo no se auto-detecte.
 PERSONAL = re.compile("|".join([
     "Ry" + "an Bar" + "dack", "bar" + "dack@", "@gm" + "ail", "Mi" + "MIT", "INC" + "AE", "Ca" + "sa de Ry" + "an",
-    r"C:\\Users", "iCl" + "oud", r"\bRy" + "an\b(?! Bar)", "rg" + "bardack",
+    r"C:\\Users", "iCl" + "oud", r"\bRy" + "an\b(?! Bar)", "rg" + "bar" + "dack@",
 ]), re.I)
 ALLOWED_PERSONAL = {"LICENSE", "THIRD_PARTY.md", os.path.join(".claude-plugin", "marketplace.json")}
 ALLOWED_SUFFIX = ("plugin.json",)
