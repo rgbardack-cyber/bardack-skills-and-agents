@@ -139,6 +139,10 @@ Plugin: `productividad-y-conocimiento`
 | `workflow-optimizer` | modo-de-trabajo | Workflow and system optimizer that takes a messy system, bloated prompt, broken automation, or slow process and strips it to the fastest, cheapest, cleanest version that  | [unhinged-claude-skills](https://github.com/Jakeschincariol/unhinged-claude-skills) |
 | `zero-sleep` | modo-de-trabajo | Holds the thread across a big multi-step build without losing the plot — long-haul endurance and context-keeping; | [unhinged-claude-skills](https://github.com/Jakeschincariol/unhinged-claude-skills) |
 
+## Fichas para ChatGPT
+
+El [catálogo de fichas para ChatGPT](chatgpt/README.md#fichas-para-chatgpt) reúne instrucciones de GPTs y plantillas reutilizables independientes de los plugins instalables.
+
 ## Sistemas de agentes
 
 Proyectos más grandes que tendrán su propio repo:
