@@ -25,7 +25,7 @@ Califica cada criterio de 1 a 5 y justifica en una línea citando el texto.
 1. **Apertura.** Las dos primeras líneas dan un dato, una situación o una postura concreta.
 2. **Una idea.** Se puede resumir la pieza en una frase y todo el texto la sirve.
 3. **Sustento.** La idea se apoya en algo verificable y no en generalidades.
-4. **Voz.** Suena a {{TU_NOMBRE}} según el perfil y sus ejemplos, no a texto genérico de IA. Señala cada frase hecha.
+4. **Voz.** Suena a {{TU_NOMBRE}} según el perfil y sus ejemplos, no a texto genérico de IA. Cita frases genéricas que diluyan la voz, como aperturas intercambiables, exageraciones sin sustento o la repetición de una misma fórmula. Explica qué detalle concreto falta y qué regla del perfil se incumple. Evalúa el uso en contexto. Conserva las expresiones propias del autor y las repeticiones deliberadas que estructuran el argumento o refuerzan una idea.
 5. **Audiencia y tema.** Le sirve a la audiencia del perfil y cae en uno de sus temas. Un lector de otro país entiende el contexto sin buscar nada y se lleva una idea aplicable fuera de {{TU_PAIS}}.
 6. **Formato e idioma.** Respeta la extensión, los párrafos cortos y el máximo de tres hashtags. Está en el idioma del perfil y se lee como escrito por alguien que domina ese idioma, no como una traducción.
 
