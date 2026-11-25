@@ -1,7 +1,7 @@
 ---
 name: claude-faceless-video
 description: |
-  Versión nativa de "higgsfield-faceless-video" (y de "video-explainer"): crea un video sin cara terminado (explicativo ilustrado, documental, historia con imágenes, video musical infantil) o edita uno creado antes, sin Higgsfield. Claude investiga, escribe guion y plan de escenas, diseña cada escena como animación HTML/SVG/CSS, genera la narración (voz local de Windows o voz conectada), ensambla con ffmpeg y añade subtítulos.
+  Versión nativa de "higgsfield-faceless-video" (y de "video-explainer"): crea un video sin cara terminado (explicativo ilustrado, documental, historia con imágenes, video musical infantil) o edita uno creado antes, sin Higgsfield. Claude investiga, escribe guion y plan de escenas, diseña cada escena como animación HTML/SVG/CSS, genera la narración (voz local de macOS o Windows, o voz conectada), ensambla con ffmpeg y añade subtítulos.
   Úsala cuando pidan: "haz un video sin cara", "explicativo narrado", "video tipo documental", "historia ilustrada", "canción infantil con video", "edita este video", "convierte este tema en un video".
   NO es para: un solo clip mudo, anuncios/UGC (claude-generate), ediciones de metraje ajeno, o solo un guion (responde en texto).
 argument-hint: "[tema o fuente] [duración] [idioma] [aspecto]"
@@ -33,7 +33,9 @@ Verifica herramientas (PowerShell):
 ```powershell
 foreach($t in 'node','npx','ffmpeg','ffprobe'){ "{0,-8} {1}" -f $t,[bool](Get-Command $t -ErrorAction SilentlyContinue) }
 ```
-Si falta `ffmpeg` pide permiso y propone `winget install Gyan.FFmpeg`. Si falta Playwright: `npm i -D playwright && npx playwright install chromium`. Si no se puede instalar algo, dilo y ofrece lo que sí es posible (guion + storyboard + escenas HTML).
+En macOS y Linux, comprueba con `command -v node npm ffmpeg ffprobe`. Para browser y Node, verifica las instalaciones disponibles también fuera del PATH antes de pedir una instalación.
+
+En Windows, si falta `ffmpeg` pide permiso y propone `winget install Gyan.FFmpeg`. Si falta Playwright: `npm i -D playwright && npx playwright install chromium`. Si no se puede instalar algo, dilo y ofrece lo que sí es posible (guion + storyboard + escenas HTML).
 
 ## Pipeline (resumen; detalles en `references/production.md`)
 
@@ -42,7 +44,7 @@ Si falta `ffmpeg` pide permiso y propone `winget install Gyan.FFmpeg`. Si falta 
 3. **Estilo**: define paleta, tipografía, iconografía y movimiento una vez (style key) y reutilízalo.
 4. **Escenas**: una página HTML/SVG por bloque con animación CSS/GSAP (duración exacta = bloque). Revisa el primer bloque antes de producir el resto.
 5. **Narración**: voz local con `scripts/tts-sapi.ps1` (gratis, sin red) o voz conectada (ElevenLabs `creative_generate_speech`) con aviso de cuenta/créditos. Una voz, un solo ajuste de ritmo; no aceleres el audio para encajar: ajusta el guion.
-6. **Render y ensamblado**: Playwright graba cada escena (`recordVideo`) o captura frames; ffmpeg une video+voz por bloque y concatena; música baja a −18 dB bajo la voz si se pidió.
+6. **Render y ensamblado**: usa [render local por fotograma](references/render-local.md) para escenas HTML con sincronía exacta. Para escenas heredadas o si HyperFrames no está disponible, usa Playwright o frames existentes con FFmpeg. FFmpeg mantiene el montaje por bloques y la música bajo la voz.
 7. **Subtítulos** (opcional): `references/captions.md`.
 8. **QC**: duración real vs pedida, audio presente y sin cortes, texto legible, sincronía; mira fotogramas clave (`ffmpeg -i v.mp4 -vf fps=1/5 chk_%02d.png` y `Read`).
 9. **Entrega**: ruta del MP4, duración, aspecto, idioma, subtítulos sí/no y fuentes citadas.

@@ -1,0 +1,5 @@
+.hyperframes/
+.cache/
+assets/
+clips/
+node_modules/

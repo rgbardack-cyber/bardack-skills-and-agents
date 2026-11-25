@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Video local en cinco segundos</title>
+<script src="assets/gsap.min.js"></script>
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; }
+  body { background: #14232a; font-family: Arial, sans-serif; color: #f4f1e8; }
+  main { position: relative; width: 100%; height: 100%; }
+  h1 { position: absolute; top: 650px; left: 90px; right: 90px; margin: 0; font-size: 125px; color: #ff715b; }
+  p { position: absolute; top: 935px; left: 90px; font-size: 49px; }
+  #bar { position: absolute; top: 1130px; left: 90px; width: 900px; height: 13px; background: #f4f1e8; transform-origin: left; }
+</style>
+</head>
+<body>
+<main data-composition-id="main" data-start="0" data-duration="5" data-width="1080" data-height="1920">
+  <h1 id="title" class="clip" data-start="0" data-duration="5" data-track-index="1">Render local</h1>
+  <p id="detail" class="clip" data-start="0" data-duration="5" data-track-index="2">Texto y audio sincronizados</p>
+  <div id="bar" class="clip" data-start="0" data-duration="5" data-track-index="3"></div>
+  <audio id="pulse" class="clip" data-start="0" data-duration="5" data-track-index="4" src="assets/pulso.wav"></audio>
+</main>
+<script>
+  const timeline = gsap.timeline({paused: true});
+  timeline.fromTo('#title', { y: 56 }, { y: 0, duration: 0.8, ease: 'power2.out' }, 0);
+  timeline.fromTo('#bar', { scaleX: 0.04 }, { scaleX: 1, duration: 5, ease: 'none' }, 0);
+  timeline.set('#title', { color: '#74efad' }, 2);
+  window.__timelines = {main: timeline};
+</script>
+</body>
+</html>

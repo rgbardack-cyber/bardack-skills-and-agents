@@ -32,7 +32,7 @@ Descubre B con `ToolSearch` (palabras: `generate image`, `generate speech`). Si 
 - GIF animado / SVG animado → SVG con SMIL/CSS o frames de canvas; GIF vía ffmpeg (`palettegen/paletteuse`) o Playwright captura de frames.
 
 **Video**
-- Motion graphics, explicativos, lyric videos, animatics, intros → HTML/CSS/GSAP/Canvas grabado con Playwright (`recordVideo`) o frames + **ffmpeg**. Ver `claude-faceless-video` para el pipeline completo.
+- Motion graphics, explicativos, lyric videos, animatics, intros → HTML/CSS/GSAP/Canvas. Para una composición sincronizada por fotograma, aplica la [guía de render local](../claude-faceless-video/references/render-local.md). Si mantienes una escena heredada, usa Playwright (`recordVideo`) o frames + **ffmpeg**. Para el flujo completo de explicativos usa `claude-faceless-video`.
 - Clips de cámara realistas, personas en movimiento → no es posible de forma nativa: guion + storyboard + shot list + prompts por toma (Nivel C).
 - Reencuadrar (reframe) un video del usuario → ffmpeg: `crop`/`scale`/`pad` con fondo difuminado.
 - Extender/editar desde bocetos → plan de cortes con ffmpeg (trim/concat/overlay).
