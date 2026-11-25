@@ -23,15 +23,28 @@ Un `style.css` compartido: variables de color, fuentes (Google Fonts), grosor de
 Cada `scenes/NN.html` es de tamaño fijo (1920×1080 o 1080×1920), con `--dur` = segundos del bloque y animaciones CSS (`animation-duration: calc(var(--dur) * 1s)`) o GSAP. Entradas escalonadas, un foco por momento, texto en pantalla ≤ 8 palabras por línea.
 
 ## 4. Narración
+En macOS, lista voces con `say -v '?'`, prueba una voz en el idioma del guion y convierte un AIFF local a WAV:
+
+```sh
+say -v "$voice" -f guion01.txt -o audio/voz01.aiff
+ffmpeg -i audio/voz01.aiff -ar 48000 -ac 2 audio/voz01.wav
+```
+
+En Windows, resuelve `scripts/tts-sapi.ps1` relativo a la carpeta de esta skill.
+
 ```powershell
+# Asigna $skillRoot a la carpeta de esta skill.
 # voces instaladas
-powershell -File "$HOME\.claude\skills\claude-faceless-video\scripts\tts-sapi.ps1" -List
+powershell -File "$skillRoot/scripts/tts-sapi.ps1" -List
 # un bloque
-powershell -File "$HOME\.claude\skills\claude-faceless-video\scripts\tts-sapi.ps1" -TextFile guion01.txt -Out audio\voz01.wav -Voice "<nombre>" -Rate 0
+powershell -File "$skillRoot/scripts/tts-sapi.ps1" -TextFile guion01.txt -Out audio\voz01.wav -Voice "<nombre>" -Rate 0
 ```
 Mide la duración con `ffprobe -v error -show_entries format=duration -of csv=p=0 audio/voz01.wav`. Si se pasa del bloque, **recorta el texto**, no aceleres. Con voz conectada, usa una sola voz para todo el video.
 
-## 5. Render de escenas a MP4 (Playwright)
+## 5. Render de escenas a MP4
+
+Para escenas sincronizadas por fotograma, usa [HyperFrames local](render-local.md). El flujo de Playwright sigue disponible para escenas existentes.
+
 ```js
 // grabar.mjs  → node grabar.mjs scenes/01.html clips/clip01.webm 10 1920 1080
 import { chromium } from 'playwright'; import path from 'node:path'; import { pathToFileURL } from 'node:url';
