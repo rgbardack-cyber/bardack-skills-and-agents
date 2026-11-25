@@ -1,6 +1,7 @@
 ---
 name: lean-system
-description: Auditoría y recorte de costo y complejidad: mapea un sistema, prompt, automatización o flujo de IA, elimina redundancia y desperdicio de tokens, llamadas y cómputo, y entrega la versión más barata y simple que produce el mismo resultado, con antes/después verificado. Úsala cuando algo funciona pero está pesado, lento, caro o pegado con cinta, cuando un pipeline de IA cuesta más de lo debido, o cuando vayan a repartir las mismas instrucciones largas a muchos subagentes y el costo suba.
+description: >-
+  Auditoría y recorte de costo y complejidad: mapea un sistema, prompt, automatización o flujo de IA, elimina redundancia y desperdicio de tokens, llamadas y cómputo, y entrega la versión más barata y simple que produce el mismo resultado, con antes/después verificado. Úsala cuando algo funciona pero está pesado, lento, caro o pegado con cinta, cuando un pipeline de IA cuesta más de lo debido, o cuando vayan a repartir las mismas instrucciones largas a muchos subagentes y el costo suba.
 ---
 
 # Lean System
@@ -19,6 +20,10 @@ Mismo resultado, una fracción del peso y del costo.
 5. **Verificar equivalencia:** la versión recortada debe producir lo mismo antes de recomendarla. Más ligera no puede significar rota.
 6. **Cuantificar:** estima costo o tokens antes y después, con cifras concretas.
 7. **Registrar** lo quitado que tuviera un propósito no obvio, para no cortar algo estructural por accidente.
+
+## Revisión opcional del gasto por tarea
+
+Si el usuario pregunta si le compensan sus herramientas de IA, registra por tarea recurrente su frecuencia, costo por ejecución, tiempo manual, tiempo con IA, revisión humana pendiente y quién aprueba. Suma el tiempo de revisión al tiempo con IA para calcular el ahorro neto. Para una suscripción compartida, divide su costo solo si hay datos suficientes para asignarlo entre tareas y explica el método. Distingue cada cifra medida de cada estimación y deja como **desconocido** cualquier valor que falte. No extrapoles una cifra desconocida a un total semanal.
 
 ## Táctica condicional: compresión en mandarín para fan-out
 Solo cuando el mismo bloque largo de instrucciones se envía a muchos subagentes:
